@@ -1,0 +1,25 @@
+languageCode = "en"
+languageName = "English"
+languageDirection = "ltr"
+weight = 1
+
+title = "Chih Yu's Land"
+copyright = "&copy; 2024 Congo contributors"
+
+[params]
+  dateFormat = "25 December 2025"
+  mainSections = ["samples"]
+  description = "Connecting the dots."
+
+[params.author]
+  name = "Su Chih Yu"
+  image = "img/author_chihyu.jpg"
+  # headline = "Connecting the dots."
+  bio = "Dreamer. [View my Resume](https://github.com/Chih-Yu)"
+  links = [
+    { linkedin = "https://www.linkedin.com/in/chih-yu-su-4464a11b6/" },
+    { github = "https://github.com/Chih-Yu" },
+    # { x-twitter = "https://twitter.com/" },
+    # { facebook = "https://facebook.com/" },
+    # { youtube = "https://youtube.com/" },
+  ]
