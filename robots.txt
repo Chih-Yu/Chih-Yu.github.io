@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://Chih-Yu.github.io/sitemap.xml
