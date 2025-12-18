@@ -7,7 +7,7 @@ description: "This is a briefly introdcution of myself"
 Connecting the dots.
 {{< /lead >}}
 
-<div style=" mx-auto text-justify">
+<div class="mx-auto text-left md:text-justify px-4">
 
 ### Hi, I’m **Tom**
 
@@ -24,6 +24,7 @@ Dreaming of visiting all the corners of the world.
 
 Curious about my previous work?  
 Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
+
 </div>
 
 
