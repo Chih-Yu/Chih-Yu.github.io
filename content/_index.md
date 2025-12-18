@@ -23,7 +23,6 @@ Dreaming of visiting all the corners of the world.
 Curious about my previous work?  
 Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
 
-
 {{< figure src="main_fuji.jpg" class="mx-auto mt-6 img-fluid" >}}
 
 <!-- <div style="text-align: left;">
@@ -46,10 +45,10 @@ Built Python-based automation tools for product engineers, enabling streamlined 
 
 ## Education
 
-{{< cv-card 
+{{< cv-card
     title="Dual Bachelor of Science in Mechanical Engineering and Computer Science"
     institution="National Cheng Kung University"
-    link="https://www.ncku.edu.tw/"
+    link="<https://www.ncku.edu.tw/>"
     date="2020 - 2025"
     location="Tainan, Taiwan"
     style="blue"
