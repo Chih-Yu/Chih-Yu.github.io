@@ -48,7 +48,7 @@ Built Python-based automation tools for product engineers, enabling streamlined 
 {{< cv-card
     title="Dual Bachelor of Science in Mechanical Engineering and Computer Science"
     institution="National Cheng Kung University"
-    link="<https://www.ncku.edu.tw/>"
+    link="https://www.ncku.edu.tw/"
     date="2020 - 2025"
     location="Tainan, Taiwan"
     style="blue"
