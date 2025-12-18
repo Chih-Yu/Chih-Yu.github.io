@@ -7,8 +7,6 @@ description: "This is a briefly introdcution of myself"
 Connecting the dots.
 {{< /lead >}}
 
-<div class="mx-auto text-left md:text-justify px-4">
-
 ### Hi, I’m **Tom**
 
 I am an undergraduate student double majoring in **Mechanical Engineering** and **Computer Science**, focusing on building intelligent robotic systems.
@@ -24,8 +22,6 @@ Dreaming of visiting all the corners of the world.
 
 Curious about my previous work?  
 Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
-
-</div>
 
 
 <!-- <div class="flex px-4 py-2 mb-8 text-base rounded-md bg-primary-100 dark:bg-primary-900">
