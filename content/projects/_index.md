@@ -1,5 +1,5 @@
 ---
-title: "Documentation"
+title: "Projects"
 description: "Learn how to use Congo and its features."
 
 cascade:
