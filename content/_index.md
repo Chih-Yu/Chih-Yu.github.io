@@ -16,7 +16,8 @@ I am an undergraduate student double majoring in **Mechanical Engineering** and 
 My research interests lie in [Robotics](tags/robotics), [Computer Vision](/), and [High Performance Computing](/).
 
 I enjoy tasting hand-brewed coffee in my free time.  
-I play tennis and badminton :tennis: :badminton:.  
+I play tennis and badminton :tennis: :badminton:.
+I am always looking for new places to explore.  
 Dreaming of visiting all the corners of the world.
 
 <!-- I enjoy developing systems that connect physics-based modeling with modern computational tools, enabling robots to understand and act in real-world environments. -->
