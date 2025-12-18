@@ -3,15 +3,15 @@ title: "Projects"
 description: "Demonstrate My Projects"
 
 cascade:
-  showDate: false
+  showDate: true
   showAuthor: false
   showSummary: true
   invertPagination: true
 ---
 
-<!-- {{< lead >}}
-Simple, yet powerful. Learn how to use Congo and its features.
-{{< /lead >}} -->
+{{< lead >}}
+Wingardium Leviosa !
+{{< /lead >}}
 
 <!-- ![Screenshots of Congo on an iPhone, iPad and MacBook](screenshot.png) -->
 

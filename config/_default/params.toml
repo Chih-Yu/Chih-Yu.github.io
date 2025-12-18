@@ -33,7 +33,7 @@ fingerprintAlgorithm = "sha256"
 
 [homepage]
   layout = "profile" # valid options: page, profile, custom
-  showRecent = true
+  # showRecent = true
   recentLimit = 5
 
 [article]
@@ -49,7 +49,7 @@ fingerprintAlgorithm = "sha256"
   showPagination = false
   invertPagination = false
   showReadingTime = false
-  showTableOfContents = true
+  showTableOfContents = false # 文章下面的目錄
   showTaxonomies = true # show tags
   showWordCount = false
   showComments = false

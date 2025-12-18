@@ -7,8 +7,8 @@ title = "Chih Yu's Land"
 copyright = "&copy; 2024 Congo contributors"
 
 [params]
-  dateFormat = "25 December 2025"
-  mainSections = ["samples"]
+  dateFormat = "02 January 2006"
+  mainSections = ["projects", "research"]
   description = "Connecting the dots."
 
 [params.author]

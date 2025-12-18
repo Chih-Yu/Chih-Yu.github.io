@@ -1,0 +1,68 @@
+{{ $style := .Get "style" | default "blue" }}
+{{ $tagBgBlue := "#1c3150" }}{{ $tagTextBlue := "#58a6ff" }}
+{{ $tagBgGreen := "#163326" }}{{ $tagTextGreen := "#4ade80" }}
+
+<style>
+    .cv-card-custom {
+        /* 預設：淺色模式樣式 */
+        background-color: #f3f4f6; /* 淺灰色 */
+        border: 1px solid #e5e7eb;
+        color: #374151;
+    }
+    
+    /* 深色模式樣式：當 HTML 帶有 .dark 類別時 (Congo 標準做法) */
+    .dark .cv-card-custom {
+        background-color: #1a1e26 !important;
+        border: 1px solid #30363d !important;
+        color: #d1d5db !important;
+    }
+
+    .cv-card-title { color: #111827; }
+    .dark .cv-card-title { color: #f0f6fc !important; }
+
+    .cv-card-text { color: #4b5563; }
+    .dark .cv-card-text { color: #d1d5db !important; }
+</style>
+
+<div class="cv-card-custom not-prose" style="border-radius: 12px; padding: 24px; margin-bottom: 24px; width: 100%; box-sizing: border-box;">
+    <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 24px; text-align: left !important;">
+        
+        <div style="flex-shrink: 0;">
+            {{ if .Get "logo" }}
+            <img src="{{ .Get "logo" | relURL }}" style="width: 80px; height: 80px; border-radius: 8px; object-fit: contain; background-color: white; padding: 6px; margin: 0 !important; display: block; border: 1px solid #e5e7eb;">
+            {{ end }}
+        </div>
+        
+        <div style="flex: 1; min-width: 0; text-align: left !important;">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; flex-wrap: wrap; gap: 10px; width: 100%;">
+                <h4 class="cv-card-title" style="margin: 0; font-size: 1.3rem; font-weight: 700; text-align: left !important;">{{ .Get "title" }}</h4>
+                
+                <div style="background-color: {{ if eq $style "green" }}{{ $tagBgGreen }}{{ else }}{{ $tagBgBlue }}{{ end }}; 
+                            color: {{ if eq $style "green" }}{{ $tagTextGreen }}{{ else }}{{ $tagTextBlue }}{{ end }}; 
+                            padding: 4px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; white-space: nowrap; display: inline-flex; align-items: center;">
+                   <span style="margin-right: 6px;">📅</span> {{ .Get "date" }}
+                </div>
+            </div>
+            
+            <div style="margin-bottom: 12px; text-align: left !important;">
+                <div style="color: #58a6ff; font-weight: 600; font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 6px;">
+                    <span>🏢</span> 
+                    {{ if .Get "link" }}
+                        <a href="{{ .Get "link" }}" target="_blank" rel="noopener noreferrer" style="color: #58a6ff; text-decoration: none; border-bottom: 1px dashed #58a6ff;">
+                            {{ .Get "institution" }}
+                        </a>
+                    {{ else }}
+                        {{ .Get "institution" }}
+                    {{ end }}
+                </div>
+                <div style="color: #8b949e; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
+                    <span>📍</span> {{ .Get "location" }}
+                </div>
+            </div>
+
+            <div class="cv-card-text" style="font-size: 0.95rem; line-height: 1.6; text-align: left !important; margin-top: 12px;">
+                {{ .Inner | markdownify }}
+            </div>
+        </div>
+    </div>
+</div>
