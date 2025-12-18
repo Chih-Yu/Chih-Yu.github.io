@@ -13,7 +13,7 @@ I am an undergraduate student double majoring in **Mechanical Engineering** and 
 
 My research interests lie in [Robotics](tags/robotics), [Computer Vision](/), and [High Performance Computing](/).
 
-I enjoy tasting hand-brewed coffee in my free time.  
+I enjoy tasting hand-brewed coffee in my free time.{{< icon coffee >}}   
 I play tennis and badminton :tennis: :badminton:.  
 I am always looking for new places to explore.  
 Dreaming of visiting all the corners of the world.

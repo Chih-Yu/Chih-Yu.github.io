@@ -20,11 +20,16 @@
   pageRef = "research"
   weight = 20
 
+  [[main]]
+  name = "Life"
+  pageRef = "life"
+  weight = 30
+
 [[main]]
   name = "Cool Stuffs"
   url = "https://youtu.be/dQw4w9WgXcQ?si=mPvd1Y5jUY02VGx1"
   # pageRef = "users"
-  weight = 30
+  weight = 40
   [main.params]
     target = "_blank"
 

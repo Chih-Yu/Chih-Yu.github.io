@@ -1,6 +1,6 @@
 ---
 title: "Projects"
-description: "Learn how to use Congo and its features."
+description: "Demonstrate My Projects"
 
 cascade:
   showDate: false
@@ -9,13 +9,13 @@ cascade:
   invertPagination: true
 ---
 
-{{< lead >}}
+<!-- {{< lead >}}
 Simple, yet powerful. Learn how to use Congo and its features.
-{{< /lead >}}
+{{< /lead >}} -->
 
-![Screenshots of Congo on an iPhone, iPad and MacBook](screenshot.png)
+<!-- ![Screenshots of Congo on an iPhone, iPad and MacBook](screenshot.png) -->
 
-This section contains everything you need to know about Congo. If you're new, check out the [Installation]({{< ref "projects/installation" >}}) guide to begin or visit the 
-_Special thanks to [Katerina Limpitsouni](https://ninalimpi.com) for the excellent illustrations that are used throughout these docs!_
+This section gathers my projects from course work to side quests of my own, and Tártaros.  
+Stay tuned… more creations are on the way.
 
 ---
