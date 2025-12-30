@@ -7,8 +7,20 @@ slug: "Pose-RobotArm-HRI"
 tags: ["robotics"]
 ---
 
-## [{{< icon github >}}  GitHub Source](https://github.com/Chih-Yu/Pose-RobotArm-HRI)  
-## [Project Poster (Chinese Version)](https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf)
+{{< katex >}}
+
+<!-- ### [{{< icon github >}}  GitHub Source](https://github.com/Chih-Yu/Pose-RobotArm-HRI)  
+
+### [Project Poster (Chinese Version)](https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf) -->
+
+<div style="background: rgba(0,0,0,0.05); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+  <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 10px;">
+    {{< icon github >}} <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI">GitHub Source Code</a>
+  </div>
+  <div style="font-size: 1.2rem;">
+    📄 <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf">Project Poster (Chinese Version)</a>
+  </div>
+</div>
 
 This project develops an intuitive human-robot interaction (HRI) system. By leveraging **Deep Learning (MediaPipe)** and **Digital Twin (PyBullet)** technologies, it maps human arm gestures captured via a depth camera to a physical robot arm in real-time. This replaces traditional keyboard-based control with natural, vision-based interaction.
 
@@ -44,7 +56,9 @@ The MediaPipe Pose model identifies key landmarks. We specifically focus on the 
 ### 3. Motion Smoothing (Kalman Filter)
 To counteract involuntary tremors and sensor noise, a discrete Kalman Filter is implemented to smooth the trajectory. The state update is governed by:
 
-\\(x_k = K_k \cdot z_k + (1 - K_k) \cdot x_{k-1}\\)
+$$
+x_k = K_k \cdot z_k + (1 - K_k) \cdot x_{k-1}
+$$
 
 **Where:**
 * $x_k$: Current estimated position (Smooth output)
