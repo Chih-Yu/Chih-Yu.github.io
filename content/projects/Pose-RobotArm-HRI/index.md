@@ -4,7 +4,7 @@ date: 2024-06-07
 description: "NCKU CSIE Project"
 summary: "This project develops an intuitive human-robot interaction (HRI) system, replaces traditional keyboard-based control with natural, vision-based interaction."
 slug: "Pose-RobotArm-HRI"
-tags: ["robotics", "Computer Vision"]
+tags: ["robotics", "CV"]
 ---
 
 {{< katex >}}
