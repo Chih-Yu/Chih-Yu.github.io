@@ -11,7 +11,7 @@ Connecting the dots.
 
 I am an undergraduate student double majoring in **Mechanical Engineering** and **Computer Science**, focusing on building intelligent robotic systems.
 
-My research interests lie in [Robotics](tags/robotics), [Computer Vision](/), and [High Performance Computing](/).
+My research interests lie in [Robotics](tags/robotics), [Computer Vision](tags/Computer Vision), and [High Performance Computing](tags/HPC).
 
 I enjoy tasting hand-brewed coffee in my free time{{< icon coffee >}}  
 I play tennis and badminton :tennis: :badminton:  
