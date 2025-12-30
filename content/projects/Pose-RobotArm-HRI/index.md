@@ -7,26 +7,15 @@ slug: "Pose-RobotArm-HRI"
 tags: ["robotics"]
 ---
 
-{{< katex >}}
+<!-- {{< katex >}} -->
 
-<!-- ### [{{< icon github >}}  GitHub Source](https://github.com/Chih-Yu/Pose-RobotArm-HRI)  
+#### [{{< icon github >}} Source](https://github.com/Chih-Yu/Pose-RobotArm-HRI)  
 
-### [Project Poster (Chinese Version)](https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf) -->
+#### [Project Poster (Chinese Version)](https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf)
 
-<div style="background: rgba(0,0,0,0.05); padding: 20px; border-radius: 10px; margin-bottom: 20px;">
-  <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 10px;">
-    {{< icon github >}} <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI">GitHub Source Code</a>
-  </div>
-  <div style="font-size: 1.2rem;">
-    📄 <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf">Project Poster (Chinese Version)</a>
-  </div>
-</div>
+<br> 
 
 This project develops an intuitive human-robot interaction (HRI) system. By leveraging **Deep Learning (MediaPipe)** and **Digital Twin (PyBullet)** technologies, it maps human arm gestures captured via a depth camera to a physical robot arm in real-time. This replaces traditional keyboard-based control with natural, vision-based interaction.
-
-## Team & Supervision
-* Developers: Su Chih-Yu, Zhang Yi-Lun
-* Advisor: Prof. Jenn-Jier James Lien
 
 ---
 
@@ -46,7 +35,7 @@ The system follows a closed-loop control flow to ensure precision and safety:
 ## Key Technical Modules
 
 ### 1. Vision & Depth Sensing (Intel® RealSense™)
-The system utilizes infrared (IR) laser and RGB sensors to capture 3D spatial mapping ($X, Y, Z$). This allows the system to distinguish the user's distance and accurately map movements to the robot's coordinate system.
+The system utilizes infrared (IR) laser and RGB sensors to capture 3D spatial mapping \\(X, Y, Z\\). This allows the system to distinguish the user's distance and accurately map movements to the robot's coordinate system.
 
 ### 2. Gesture Estimation (MediaPipe)
 The MediaPipe Pose model identifies key landmarks. We specifically focus on the Shoulder, Elbow, and Wrist joints to create a 3D mapping for the robot arm.
@@ -61,13 +50,13 @@ x_k = K_k \cdot z_k + (1 - K_k) \cdot x_{k-1}
 $$
 
 **Where:**
-* $x_k$: Current estimated position (Smooth output)
-* $K_k$: Kalman Gain (Weight of the current measurement)
-* $z_k$: Current measured position from sensors (Raw input)
-* $x_{k-1}$: Previous estimated position
+* \\(x_k\\): Current estimated position (Smooth output)
+* \\(K_k\\): Kalman Gain (Weight of the current measurement)
+* \\(z_k\\): Current measured position from sensors (Raw input)
+* \\(x_{k-1}\\): Previous estimated position
 
-| Origin | Mapped & Filter |
-| -------- | -------- | 
+| | |
+| -------- | -------- |
 | ![kalman](image/kalman.png) | ![kalman2](image/kalman2.png) |
 
 ### 4. Digital Twin & Safety (PyBullet)
