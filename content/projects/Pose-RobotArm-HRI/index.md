@@ -13,14 +13,14 @@ tags: ["robotics"]
 <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
 
   <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI" style="text-decoration: none; display: inline-flex; align-items: center; padding: 5px 10px; border-radius: 5px; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">
-    <h4 style="margin: 0; display: flex; align-items: center; color: inherit; white-space: nowrap;">
+    <h4 style="margin: 0; display: flex; align-items: center; color: inherit; white-space: nowrap; font-size: 1.2rem;">
       <span style="display: flex; align-items: center; width: 24px; justify-content: center;">{{< icon github >}}</span>
       <span style="margin-left: 8px;">Source</span>
     </h4>
   </a>
 
   <a href="https://github.com/Chih-Yu/Pose-RobotArm-HRI/blob/main/%E6%B5%B7%E5%A0%B1BotAmr_%E5%BC%B5%E7%A6%95%E5%80%AB_%E8%98%87%E8%87%B4%E5%AE%87.pdf" style="text-decoration: none; display: inline-flex; align-items: center; padding: 5px 10px; border-radius: 5px; transition: background 0.3s;" onmouseover="this.style.background='rgba(0,0,0,0.05)'" onmouseout="this.style.background='transparent'">
-    <h4 style="margin: 0; display: flex; align-items: center; color: inherit; white-space: nowrap;">
+    <h4 style="margin: 0; display: flex; align-items: center; color: inherit; white-space: nowrap; font-size: 1.2rem;">
       <span style="display: flex; align-items: center; width: 24px; justify-content: center;"></span>
       <span style="margin-left: 8px;">Project Poster</span>
     </h4>
