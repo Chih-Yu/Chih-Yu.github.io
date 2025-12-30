@@ -7,6 +7,8 @@ slug: "Pose-RobotArm-HRI"
 tags: ["robotics"]
 ---
 
+{{< katex >}}
+
 <!-- 用來強制對其跟排版連結，且有滑鼠觸碰反白 -->
 <!-- TODO: cleaner code -->
 
