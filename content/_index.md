@@ -31,18 +31,6 @@ Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
 
 </div> -->
 
-## Work Experience
-
-{{< cv-card
-    title="Test Engineer Intern"
-    institution="NXP Semiconductors"
-    date="March 2025 - July 2025"
-    location="Kaohsiung, Taiwan"
-    style="blue"
-    logo="nxp.png" >}}
-Built Python-based automation tools for product engineers, enabling streamlined hardware readiness checks and hold-lot monitoring.
-{{< /cv-card >}}
-
 ## Education
 
 {{< cv-card
@@ -53,4 +41,26 @@ Built Python-based automation tools for product engineers, enabling streamlined 
     location="Tainan, Taiwan"
     style="blue"
     logo="ncku.png" >}}
+{{< /cv-card >}}
+
+{{< cv-card
+    title="Master of Science in Robotics"
+    institution="University of Pennsylvania"
+    link="https://www.upenn.edu/"
+    date="2026 - 2028"
+    location="PA, U.S."
+    style="blue"
+    logo="upenn.png" >}}
+{{< /cv-card >}}
+
+## Work Experience
+
+{{< cv-card
+    title="Test Engineer Intern"
+    institution="NXP Semiconductors"
+    date="March 2025 - July 2025"
+    location="Kaohsiung, Taiwan"
+    style="blue"
+    logo="nxp.png" >}}
+Built Python-based automation tools for product engineers, enabling streamlined hardware readiness checks and hold-lot monitoring.
 {{< /cv-card >}}
