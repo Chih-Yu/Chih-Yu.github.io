@@ -34,16 +34,6 @@ Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
 ## Education
 
 {{< cv-card
-    title="Dual Bachelor of Science in Mechanical Engineering and Computer Science"
-    institution="National Cheng Kung University"
-    link="https://www.ncku.edu.tw/"
-    date="2020 - 2025"
-    location="Tainan, Taiwan"
-    style="blue"
-    logo="ncku.png" >}}
-{{< /cv-card >}}
-
-{{< cv-card
     title="Master of Science in Robotics"
     institution="University of Pennsylvania"
     link="https://www.upenn.edu/"
@@ -51,6 +41,16 @@ Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
     location="PA, U.S."
     style="blue"
     logo="upenn.png" >}}
+{{< /cv-card >}}
+
+{{< cv-card
+    title="Dual Bachelor of Science in Mechanical Engineering and Computer Science"
+    institution="National Cheng Kung University"
+    link="https://www.ncku.edu.tw/"
+    date="2020 - 2025"
+    location="Tainan, Taiwan"
+    style="blue"
+    logo="ncku.png" >}}
 {{< /cv-card >}}
 
 ## Work Experience
