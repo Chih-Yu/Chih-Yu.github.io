@@ -9,7 +9,7 @@ Connecting the dots.
 
 ### Hi, I’m **Tom**
 
-I received my dual B.S. in **Mechanical Engineering** and **Computer Science** from **NCKU (Taiwan)** and will be pursuing a Master's degree in **Robotics** at **University of Pennsylvania (UPenn)**, focusing on building generalist robots.
+I received my dual Bachelor of Science in **Mechanical Engineering** and **Computer Science** from **NCKU (Taiwan)** and will be pursuing a Master's degree in **Robotics** at **University of Pennsylvania (UPenn)**, focusing on building generalist robots.
 
 My research interests lie in [Robotics](tags/robotics), [Computer Vision](tags/CV), and [High Performance Computing](tags/HPC).
 
@@ -44,7 +44,7 @@ Visit the **[Projects Page]({{< ref "projects" >}})** to explore more.
 {{< /cv-card >}}
 
 {{< cv-card
-    title="Dual Bachelor of Science in Mechanical Engineering and Computer Science"
+    title="Dual B.S. in Mechanical Engineering and Computer Science"
     institution="National Cheng Kung University"
     link="https://www.ncku.edu.tw/"
     date="2020 - 2025"
