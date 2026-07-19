@@ -60,20 +60,7 @@ Heat conduction inside the brake disk is solved using the explicit **Forward Tim
 
 The temperature update is
 
-$$
-T_{i,j}^{n+1}
-=
-T_{i,j}^{n}
-+
-\alpha\Delta t
-\left(
-\frac{T_{i+1,j}^{n}-2T_{i,j}^{n}+T_{i-1,j}^{n}}
-{\Delta x^2}
-+
-\frac{T_{i,j+1}^{n}-2T_{i,j}^{n}+T_{i,j-1}^{n}}
-{\Delta y^2}
-\right),
-$$
+$$T_{i,j}^{n+1} = T_{i,j}^{n} + \alpha\Delta t \left( \frac{T_{i+1,j}^{n}-2T_{i,j}^{n}+T_{i-1,j}^{n}}{\Delta x^2}+\frac{T_{i,j+1}^{n}-2T_{i,j}^{n}+T_{i,j-1}^{n}}{\Delta y^2}\right)$$
 
 where
 
