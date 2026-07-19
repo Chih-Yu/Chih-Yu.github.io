@@ -6,17 +6,22 @@ summary: "This project simulates the transient thermal behavior of a bicycle dis
 slug: ""
 tags: ["HPC"]
 ---
+
 {{< katex >}}
 
 This project simulates the transient thermal behavior of a bicycle disc brake during a braking event. Leveraging **CUDA** for high-performance parallel computing, the simulation models the heat generation from a rotating brake pad and the cooling effects of forced convection.
 
-After computing the heat transfer, parallelize the Conjugate Gradient (CG) method to solve the displacement:  
-$$ [Kr]\cdot[x]=[Fr]​ $$
-Here, \\(Kr\\)​ is a 27,880 × 27,880 stiffness matrix, \\( Fr \\)​ is a 27,880 × 1 force vector, and \\( x \\) is the displacement vector (for 13,940 nodes in both x and y directions).
+After computing the heat transfer, parallelize the Conjugate Gradient (CG) method to solve the displacement:
+
+$$
+[Kr]\cdot[x]=[Fr]
+$$
+
+Here, \(Kr\) is a **27,880 × 27,880** stiffness matrix, \(Fr\) is the force vector, and \(x\) is the displacement vector.
 
 ---
 
-## Simulation Goals & Geometry
+# Simulation Goals & Geometry
 
 * **Geometry Source**: Brake \\( (1070 \times 1070) \\) grid.
 * **Solid (Disk)**: Pixel value \\( \le 200 \\).
@@ -29,7 +34,7 @@ Here, \\(Kr\\)​ is a 27,880 × 27,880 stiffness matrix, \\( Fr \\)​ is a 27,
 
 ---
 
-## Thermal Physics Model
+# Thermal Physics Model
 
 ### 1. Dynamic Heat Source
 Instead of a rotating disk, the simulation moves the brake pad relative to a static disk:
@@ -37,7 +42,6 @@ Instead of a rotating disk, the simulation moves the brake pad relative to a sta
 * **Location**: 80 mm from the disk center.
 * **Rotation**: 100 RPM.
 * **Heat Flux**: A total of \\(12,000 \text{ W}\\) is applied.
-* **Stability**: Due to the high flux, a small time step (\\(\Delta t = 0.00002 \text{ s}\\)) is used to ensure numerical stability.
 
 ### 2. Forced Convection Cooling
 Each cell in the disk is cooled based on its local velocity \\(V(x, y)\\):
@@ -49,6 +53,67 @@ Each cell in the disk is cooled based on its local velocity \\(V(x, y)\\):
     *(Parameters: \\(k_{air} = 0.026 \text{ W/m.K}\\))*
 * **Heat Loss (\\(\Delta Q\\))**: Based on Newton's Law of Cooling: 
     $$\Delta Q = \Delta t \cdot \Delta x \cdot \Delta y \cdot h \cdot (T(x,y) - 300)$$
+
+### 3. Forward Time-Centered Space (FTCS)
+
+Heat conduction inside the brake disk is solved using the explicit **Forward Time-Centered Space (FTCS)** finite difference scheme.
+
+The temperature update is
+
+$$
+T_{i,j}^{n+1}
+=
+T_{i,j}^{n}
++
+\alpha\Delta t
+\left(
+\frac{T_{i+1,j}^{n}-2T_{i,j}^{n}+T_{i-1,j}^{n}}
+{\Delta x^2}
++
+\frac{T_{i,j+1}^{n}-2T_{i,j}^{n}+T_{i,j-1}^{n}}
+{\Delta y^2}
+\right),
+$$
+
+where
+
+$$
+\alpha=\frac{k}{\rho C_p}
+$$
+
+is the thermal diffusivity.
+
+A small time step
+
+$$
+\Delta t=2\times10^{-5}\ \mathrm{s}
+$$
+
+is adopted to ensure numerical stability during braking.
+
+---
+
+# Simulation Workflow
+
+Each CUDA kernel executes the following procedure for every time step:
+
+```text
+Moving Heat Source
+        │
+        ▼
+Apply Heat Input
+        │
+        ▼
+FTCS Heat Conduction
+        │
+        ▼
+Forced Convection Cooling
+        │
+        ▼
+Temperature(n+1)
+```
+
+Each CUDA thread is responsible for updating one grid cell, enabling massive parallel computation over the entire temperature field.
 
 ---
 
@@ -88,15 +153,14 @@ void Device_to_Device(float **d_b, float **d_a, int N){
   3. Matrix x vector computation 
   4. Dot Product  
 
-The CUDA-based Conjugate Gradient (CG) implementation achieves an approximate **8× speedup** compared to MATLAB’s direct matrix division approach.
+The CUDA-based Conjugate Gradient (CG) implementation achieves an approximate **8× speedup** compared to MATLAB’s direct matrix division approach. 
 
 See [Pseudocode on Wiki](https://en.wikipedia.org/wiki/Conjugate_gradient_method) and final implementation on [Github](https://github.com/Chih-Yu/NCKU-Parallel-GPU-2025/blob/main/Tutorial_11/tutorial_11.cu).
 
 ---
 
-## Experience Results
+# Experience Results
 
 ![heat](image/brake_heat.jpg)
-![displacement](image/brake_displace.jpg)
 
----
+![displacement](image/brake_displace.jpg)
